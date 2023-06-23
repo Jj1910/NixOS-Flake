@@ -17,6 +17,8 @@
 
         modules = [
           ./modules/system.nix
+          ./display
+          ./services
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;

@@ -13,7 +13,7 @@
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   
-  boot.loader.grub.device = "/dev/vda"; # or "nodev" for efi only
+  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.dhcpcd.enable = true;
@@ -38,12 +38,8 @@
 
   environment.systemPackages = with pkgs; [
     vim
-    #wget
     git
   ];
-
-  services.spice-vdagentd.enable = true;
-  services.qemuGuest.enable = true;
 
   system.stateVersion = "23.05"; # Did you read the comment?
 
