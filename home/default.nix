@@ -4,7 +4,7 @@
 
   imports = [
     ./programs
-    #./display
+    ./config
   ];
 
   home.username = "justin";

@@ -18,6 +18,10 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.dhcpcd.enable = true;
 
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -40,6 +44,8 @@
     vim
     git
   ];
+
+  security.sudo.wheelNeedsPassword = false;
 
   system.stateVersion = "23.05"; # Did you read the comment?
 
