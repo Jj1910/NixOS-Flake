@@ -21,6 +21,8 @@
     wget
     tree
     openrgb
+    gnome.gedit
+    vim-full
   ];
   nixpkgs.overlays = [ 
     (final: prev: {
